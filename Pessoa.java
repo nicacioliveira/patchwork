@@ -3,12 +3,12 @@ public class Pessoa {
 	private String nome;
 	private String sobrenome;
 	private int idade;
-	private String sexo;
+	private String nomeMae;
 
 
-	public Pessoa(String nome, String sobrenome, int idade, String sexo) {
+	public Pessoa(String nome, String sobrenome, int idade, String nomeMae) {
 		this.nome = nome;
-		this.sexo = sexo;
+		this.nomeMae = nomeMae;
 		this.sobrenome = sobrenome;
 		this.idade = idade;
 }
@@ -17,6 +17,10 @@ public class Pessoa {
 		if (nome.isEmpty)
 			throw new IllegalArgumentException("Nome vazio");	
 		this.nome = nome;
+	}
+
+	public void setNomeMae(String nome) {
+		this.nomeMae = nome;
 	}
 	
 	public void setSobrenome(String sobrenome) throws IllegalArgumentException {
