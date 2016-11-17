@@ -2,10 +2,12 @@ public class Pessoa {
 
 	private String nome;
 	private String sobrenome;
+	private int idade;	
 
-	public Pessoa(String nome, String sobrenome) {
+	public Pessoa(String nome, String sobrenome, int idade) {
 		this.setNome(nome);
-		this.setSobrenome(sobrenome)
+		this.setSobrenome(sobrenome);
+		this.idade = idade;
 	}
 
 	public void setNome(String nome) throws IllegalArgumentException {
@@ -18,7 +20,10 @@ public class Pessoa {
 		if (sobrenome.isEmpty)
 			throw new IllegalArgumentException("Entrada vazia!!!");
 		this.sobrenome = sobrenome;
-
+	}
+	
+	public void setIdade(ind idade) {
+		this.idade = idade;
 	}
 
 
