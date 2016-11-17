@@ -4,15 +4,19 @@ public class Pessoa {
 	private String sobrenome;
 
 	public Pessoa(String nome, String sobrenome) {
-		this.nome = nome;
-		this.sobrenome = sobrenome;
+		this.setNome(nome);
+		this.setSobrenome(sobrenome);
 	}
 
-	public void setNome(String nome) {
+	public void setNome(String nome) throws IllegalArgumentException {
+		if (nome.isEmpty)
+			throw new IllegalArgumentException("Nome vazio");	
 		this.nome = nome;
 	}
 	
-	public void setSobrenome(String sobrenome) {
+	public void setSobrenome(String sobrenome) throws IllegalArgumentException {
+		if (sobrenome.isEmpty)
+			throw new IllegalArgumentException("Sobrenome vazio");
 		this.nome = nome;
 	}
 }
